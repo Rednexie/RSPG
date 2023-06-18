@@ -1,0 +1,242 @@
+<html>
+<head>
+<title>Random Strong Password Generator</title>
+<meta http-equiv="X-UA-Compatible" content="ie=9">
+
+<hta:application
+icon="rspg.ico"
+SysMenu="yes"
+maximizebutton="no"
+Applicationname="Random Strong Password Generator"
+Innerborder="no"
+scroll="no"
+Selection="yes"
+Singleinstance="yes"
+border="thin"
+ContextMenu="yes"
+Innerborder="no"
+Caption="yes"
+showintaskbar="yes"
+version="1.0"
+/>
+<link rel="icon" href="rspg.ico">
+
+
+</head>
+<body onload="Window_OnLoad();">
+
+<style>
+.margin{
+margin-left: 100px;
+
+}
+
+.center{
+display: fflex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+
+body{
+cursor: auto;
+background-color: #d4fafa;
+}
+.buttons{
+height: 45px;
+width: 200px;
+border-radius: 30px;
+color: white;
+text-align: center;
+background-color: black;
+border-style: solid;
+border-color: white;
+border-width: 0px;
+box-shadow: none;
+outline: none;
+}
+.buttons:hover{
+border-width: 1px;
+color: black;
+background-color: white;
+border-color: black;
+}
+.buttons:active{}
+.check{
+text-shadow: none;
+box-shadow: none;
+width: 50px;
+}
+</style>
+<script type="text/vbscript">
+
+Function Window_OnLoad
+window.resizeTo 500,450
+End Function 
+
+Function button()
+Call Generate()
+End Function 
+
+
+
+function Generate()
+pool=""
+UC="QWERTYUIOPASDGFHJKLZXCVBNNM"
+NUM="1234567890"
+LC="qwertyuiopasdgfhjklzxcvbnm"
+SY="!'^+%&/()=?_@.:;,|\}][{#-*"
+If Form1.UC.checked Then pool= pool & UC
+If Form1.NUM.checked Then pool= pool & NUM
+If Form1.LC.checked Then pool= pool & LC
+If Form1.SY.checked Then pool= pool & SY
+max=len(pool)
+min=1
+Randomize
+x1=Int(((max-min+1)*Rnd+min))
+y1=Mid(pool,x1,1)
+
+Randomize
+x2=Int(((max-min+1)*Rnd+min))
+y2=Mid(pool,x2,1)
+
+Randomize
+x3=Int(((max-min+1)*Rnd+min))
+y3=Mid(pool,x3,1)
+
+Randomize
+x4=Int(((max-min+1)*Rnd+min))
+y4=Mid(pool,x4,1)
+
+Randomize
+x5=Int(((max-min+1)*Rnd+min))
+y5=Mid(pool,x5,1)
+
+Randomize
+x6=Int(((max-min+1)*Rnd+min))
+y6=Mid(pool,x6,1)
+
+Randomize
+x7=Int(((max-min+1)*Rnd+min))
+y7=Mid(pool,x7,1)
+
+Randomize
+x8=Int(((max-min+1)*Rnd+min))
+y8=Mid(pool,x8,1)
+
+Randomize
+x9=Int(((max-min+1)*Rnd+min))
+y9=Mid(pool,x9,1)
+
+Randomize
+x10=Int(((max-min+1)*Rnd+min))
+y10=Mid(pool,x10,1)
+
+Randomize
+x11=Int(((max-min+1)*Rnd+min))
+y11=Mid(pool,x11,1)
+
+
+Randomize
+x12=Int(((max-min+1)*Rnd+min))
+y12=Mid(pool,x12,1)
+
+Randomize
+x12=Int(((max-min+1)*Rnd+min))
+y12=Mid(pool,x12,1)
+
+Randomize
+x12=Int(((max-min+1)*Rnd+min))
+y12=Mid(pool,x12,1)
+
+Randomize
+x13=Int(((max-min+1)*Rnd+min))
+y13=Mid(pool,x13,1)
+
+Randomize
+x14=Int(((max-min+1)*Rnd+min))
+y14=Mid(pool,x14,1)
+
+Randomize
+x15=Int(((max-min+1)*Rnd+min))
+y15=Mid(pool,x15,1)
+
+Randomize
+x16=Int(((max-min+1)*Rnd+min))
+y16=Mid(pool,x16,1)
+
+Randomize
+x17=Int(((max-min+1)*Rnd+min))
+y17=Mid(pool,x17,1)
+
+Randomize
+x18=Int(((max-min+1)*Rnd+min))
+y18=Mid(pool,x18,1)
+
+Randomize
+x19=Int(((max-min+1)*Rnd+min))
+y19=Mid(pool,x19,1)
+
+Randomize
+x20=Int(((max-min+1)*Rnd+min))
+y20=Mid(pool,x20,1)
+
+div.innerText= "" & y19 & "" & y11 & "" & y18 & "" & y4 & "" &y16 & "" & y15 & "" & y14 & "" & y5 & "" & y12 & "" & y8 & "" & y10 & "" & y9 & "" & y13 & "" & y7 & "" & y6 & "" & y1 & "" & y17 & "" & y3 & "" & y2 & "" & y20 & ""
+
+End function 
+
+
+
+Function credits()
+msgb = MsgBox("Do you want to open the browser to visit developer's website?",36+4096,"Random Strong Password Generator")
+If msgb = 6 Then CreateObject("wscript.shell").run"https://rednexie.github.io/"
+End Function 
+
+
+Function rspgCopy()
+Set wshShell = CreateObject("wscript.shell")
+copyText = div.innerText
+If copyText = "" Then Exit Function  
+If copyText = "Click the button below to generate" Then Exit Function 
+wshShell.Run"cmd.exe /c echo "&copyText&"|clip",0
+
+End Function 
+
+
+</script>
+
+
+<script type="text/javascript" language="javascript">
+</script>
+<div class="center">
+
+<i><h2>
+<span id="div" style="background-color: #fff; user-select: all; padding: 2px; ">Click the button below to generate</span>
+</h2>
+</i>
+</div>
+<br>
+<div class="margin">
+<form name="Form1" id="form1" >
+<input type="checkbox" name="UC" value="Uppercase letters" checked="yes" class="check">UpperCase Letters</input>
+<br>
+<input type="checkbox" name="NUM" value="numbers" checked="yes" class="check" >Numbers</input>
+<br>
+<input type="checkbox" name="LC" value="Lowercase letters" checked="yes" class="check">LowerCase Letters</input>
+<br>
+<input type="checkbox" name="SY" value="Symbols" checked="yes" class="check">Symbols</input>
+<br>
+</form>
+</div>
+<br>
+<div class="center">
+<button onclick="generate()" class="buttons">Generate Random Password</button>
+</div>
+<br>
+<div class="center">
+<button onclick="rspgCopy()" class="buttons">Copy Generated Password</button>
+</div>
+<br>
+
+</html>
